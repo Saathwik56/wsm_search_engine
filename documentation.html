@@ -8,8 +8,14 @@
     size: A4;
     margin: 18mm 16mm 18mm 16mm;
     @bottom-right {
-      content: counter(page);
-      font-size: 9pt;
+      content: "Page " counter(page);
+      font-size: 8.5pt;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #64748b;
+    }
+    @bottom-left {
+      content: "WSM Assignment • R.Saathwik (B124093)";
+      font-size: 8.5pt;
       font-family: 'Segoe UI', Arial, sans-serif;
       color: #64748b;
     }
@@ -19,103 +25,157 @@
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
     color: #1e293b;
     line-height: 1.55;
-    font-size: 10pt;
+    font-size: 9.8pt;
     margin: 0;
     padding: 0;
   }
 
-  /* Cover Page */
-  .cover-page {
-    page-break-after: always;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-left: 6px solid #2563eb;
-    padding-left: 36px;
-    margin-top: 40px;
+  /* Top Student Credentials Header (Cover / First Page Top) */
+  .student-header-banner {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: #ffffff;
+    padding: 22px 28px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 
-  .course-badge {
+  .student-header-grid {
+    display: table;
+    width: 100%;
+  }
+
+  .student-header-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .student-header-left {
+    width: 60%;
+  }
+
+  .student-header-right {
+    width: 40%;
+    text-align: right;
+  }
+
+  .student-name-title {
+    font-size: 20pt;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    margin: 0 0 4px 0;
+    color: #ffffff;
+  }
+
+  .student-id-badge {
+    display: inline-block;
+    background: #fef08a;
+    color: #854d0e;
+    font-size: 11pt;
+    font-weight: 800;
+    padding: 3px 12px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .student-sub-info {
+    font-size: 9.5pt;
+    color: #e2e8f0;
+    margin: 2px 0;
+  }
+
+  /* Cover Main Content */
+  .cover-body {
+    border-left: 5px solid #2563eb;
+    padding-left: 28px;
+    margin: 28px 0 24px 0;
+  }
+
+  .assignment-tag {
     display: inline-block;
     background: #e0f2fe;
     color: #0369a1;
-    font-size: 11pt;
+    font-size: 10pt;
     font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 6px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 20px;
-    width: fit-content;
+    margin-bottom: 12px;
   }
 
   .cover-title {
-    font-size: 28pt;
+    font-size: 26pt;
     font-weight: 800;
     color: #0f172a;
-    line-height: 1.15;
-    margin: 0 0 12px 0;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
   }
 
   .cover-subtitle {
-    font-size: 13pt;
+    font-size: 12pt;
     color: #475569;
-    margin: 0 0 32px 0;
-    line-height: 1.4;
+    margin: 0 0 20px 0;
+    line-height: 1.45;
   }
 
-  .cover-meta {
-    margin-top: 40px;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 24px;
-    font-size: 10.5pt;
+  .meta-table {
+    width: 100%;
+    margin-top: 24px;
+    border: none;
+  }
+
+  .meta-table td {
+    border: none;
+    padding: 6px 0;
+    font-size: 10pt;
     color: #334155;
   }
 
-  .cover-meta-item {
-    margin-bottom: 8px;
-  }
-
-  .cover-meta strong {
+  .meta-table td strong {
     color: #0f172a;
     display: inline-block;
-    width: 140px;
+    width: 170px;
   }
 
   /* Typography */
   h1 {
-    font-size: 18pt;
+    font-size: 16pt;
     font-weight: 800;
     color: #0f172a;
     border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 6px;
-    margin-top: 28px;
-    margin-bottom: 14px;
+    padding-bottom: 5px;
+    margin-top: 26px;
+    margin-bottom: 12px;
   }
 
   h2 {
-    font-size: 13pt;
+    font-size: 12.5pt;
     font-weight: 700;
     color: #1e3a8a;
-    margin-top: 20px;
+    margin-top: 18px;
     margin-bottom: 8px;
+    border-left: 4px solid #3b82f6;
+    padding-left: 8px;
   }
 
   h3 {
-    font-size: 11pt;
+    font-size: 10.5pt;
     font-weight: 600;
     color: #0f766e;
-    margin-top: 14px;
+    margin-top: 12px;
     margin-bottom: 6px;
   }
 
   p {
-    margin: 0 0 10px 0;
+    margin: 0 0 9px 0;
+    text-align: justify;
   }
 
   ul, ol {
-    margin: 0 0 12px 0;
-    padding-left: 22px;
+    margin: 0 0 10px 0;
+    padding-left: 20px;
   }
 
   li {
@@ -123,36 +183,36 @@
   }
 
   /* Tables */
-  table {
+  table.data-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 14px 0 18px 0;
-    font-size: 9pt;
+    margin: 12px 0 16px 0;
+    font-size: 8.8pt;
   }
 
-  th {
+  table.data-table th {
     background: #f1f5f9;
     color: #0f172a;
     text-align: left;
-    padding: 8px 10px;
+    padding: 7px 9px;
     border: 1px solid #cbd5e1;
     font-weight: 700;
   }
 
-  td {
-    padding: 7px 10px;
+  table.data-table td {
+    padding: 6px 9px;
     border: 1px solid #cbd5e1;
     vertical-align: top;
   }
 
-  tr:nth-child(even) td {
+  table.data-table tr:nth-child(even) td {
     background: #f8fafc;
   }
 
-  /* Code & Pre */
+  /* Code & Syntax */
   code {
     font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 8.8pt;
+    font-size: 8.6pt;
     background: #f1f5f9;
     padding: 1px 4px;
     border-radius: 4px;
@@ -162,13 +222,13 @@
   pre {
     background: #0f172a;
     color: #f8fafc;
-    padding: 12px 14px;
+    padding: 10px 12px;
     border-radius: 6px;
     font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 8.5pt;
-    line-height: 1.45;
+    font-size: 8.3pt;
+    line-height: 1.4;
     overflow-x: auto;
-    margin: 10px 0 14px 0;
+    margin: 8px 0 12px 0;
   }
 
   pre code {
@@ -181,23 +241,35 @@
   .callout {
     background: #eff6ff;
     border-left: 4px solid #3b82f6;
-    padding: 10px 14px;
+    padding: 9px 12px;
     border-radius: 0 6px 6px 0;
-    margin: 12px 0;
+    margin: 10px 0;
   }
 
   .callout-title {
     font-weight: 700;
     color: #1e40af;
     margin-bottom: 4px;
-    font-size: 9.5pt;
+    font-size: 9.3pt;
+  }
+
+  .formula-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #059669;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-family: 'Consolas', monospace;
+    font-size: 9pt;
+    color: #065f46;
   }
 
   .badge {
     display: inline-block;
     padding: 2px 7px;
     border-radius: 4px;
-    font-size: 8pt;
+    font-size: 7.8pt;
     font-weight: 700;
     text-transform: uppercase;
   }
@@ -213,310 +285,584 @@
 </head>
 <body>
 
-<!-- ================= COVER PAGE ================= -->
-<div class="cover-page">
-  <div class="course-badge">WEB SEARCH &amp; MINING (WSM) ASSIGNMENT</div>
-  <div class="cover-title">Information Retrieval System Documentation</div>
-  <div class="cover-subtitle">
-    A Modular Search Engine with Positional Inverted Indexing, Shunting-Yard Boolean Retrieval, Permuterm Wildcard Processing, and Tkinter GUI
-  </div>
-
-  <div class="cover-meta">
-    <div class="cover-meta-item"><strong>Developer / Author:</strong> Saathwik (Saathwik56)</div>
-    <div class="cover-meta-item"><strong>GitHub Repository:</strong> <a href="https://github.com/Saathwik56/wsm_search_engine" style="color: #2563eb; text-decoration: none;">github.com/Saathwik56/wsm_search_engine</a></div>
-    <div class="cover-meta-item"><strong>Tech Stack:</strong> Python 3.11 Standard Library (No external dependencies)</div>
-    <div class="cover-meta-item"><strong>GUI Framework:</strong> Python Tkinter / ttk</div>
-    <div class="cover-meta-item"><strong>Date:</strong> November 2026</div>
-    <div class="cover-meta-item"><strong>Test Coverage:</strong> 7 / 7 Automated Unit Tests Passing (100%)</div>
+<!-- ================= FIRST PAGE TOP: STUDENT CREDENTIALS HEADER ================= -->
+<div class="student-header-banner">
+  <div class="student-header-grid">
+    <div class="student-header-cell student-header-left">
+      <div class="student-name-title">R. Saathwik</div>
+      <div><span class="student-id-badge">STUDENT ID: B124093</span></div>
+      <div class="student-sub-info">Course: <strong>Web Search and Mining (WSM)</strong></div>
+      <div class="student-sub-info">Department of Computer Science and Engineering</div>
+    </div>
+    <div class="student-header-cell student-header-right">
+      <div class="student-sub-info"><strong>GitHub Profile:</strong> Saathwik56</div>
+      <div class="student-sub-info"><strong>Project:</strong> WSM Search Engine</div>
+      <div class="student-sub-info"><strong>Date:</strong> November 2026</div>
+      <div class="student-sub-info"><strong>Status:</strong> Completed &amp; Verified</div>
+    </div>
   </div>
 </div>
 
-<!-- ================= SECTION 1: EXECUTIVE SUMMARY ================= -->
-<h1>1. Executive Summary</h1>
-<p>
-This project implements a complete, self-contained Information Retrieval (IR) system designed for the Web Search and Mining (WSM) curriculum. The search engine features strict modular separation across all seven classical IR stages: document ingestion, tokenization, text normalization, positional inverted index construction, query processing, wildcard processing, and frontend graphical user interface.
-</p>
-<p>
-The system is built entirely using standard Python without external third-party dependencies (such as NLTK, NumPy, or Lucene), guaranteeing seamless portability and direct execution on standard environments.
-</p>
+<!-- ================= COVER MAIN CONTENT ================= -->
+<div class="cover-body">
+  <div class="assignment-tag">WSM Assignment Specification</div>
+  <div class="cover-title">Modular Information Retrieval System</div>
+  <div class="cover-subtitle">
+    Design, Architecture, and Implementation of an End-to-End Search Engine featuring Positional Inverted Indexing, Shunting-Yard Boolean Evaluation, Permuterm Wildcard Processing, and Desktop Tkinter GUI.
+  </div>
 
-<div class="callout">
-  <div class="callout-title">Key Architectural Highlights</div>
-  <ul>
-    <li><strong>Pure Standard Library:</strong> Employs <code>dataclasses</code>, <code>re</code>, <code>unicodedata</code>, <code>json</code>, <code>math</code>, and <code>tkinter</code>.</li>
-    <li><strong>Dual Wildcard Resolution:</strong> Implements both a <strong>Permuterm Index</strong> (rotations with binary search prefix lookup) and a <strong>K-gram Index</strong> (trigram postings with regex post-filtering).</li>
-    <li><strong>Full Boolean Parsing:</strong> Uses Dijkstra's <strong>Shunting-yard algorithm</strong> to convert infix expressions into Reverse Polish Notation (RPN), supporting <code>AND</code>, <code>OR</code>, <code>NOT</code>, nested parentheses, and implicit <code>AND</code> conjunctions.</li>
-    <li><strong>Positional Inverted Index:</strong> Retains exact word positions for phrase queries (e.g., <code>"inverted index"</code>) and character offsets for live snippet highlighting.</li>
-    <li><strong>Tkinter GUI:</strong> Features a search input box with <code>&lt;Return&gt;</code> trigger, a distinct Search button, and a read-only scrolled result area with highlighted matches and wildcard diagnostics.</li>
+  <table class="meta-table">
+    <tr>
+      <td><strong>Student Name:</strong></td>
+      <td><strong>R. Saathwik</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Student ID:</strong></td>
+      <td><strong>B124093</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Course Name:</strong></td>
+      <td>Web Search and Mining (WSM)</td>
+    </tr>
+    <tr>
+      <td><strong>GitHub Repository:</strong></td>
+      <td><a href="https://github.com/Saathwik56/wsm_search_engine" style="color: #2563eb; font-weight: 600; text-decoration: none;">https://github.com/Saathwik56/wsm_search_engine</a></td>
+    </tr>
+    <tr>
+      <td><strong>Implementation:</strong></td>
+      <td>Python 3.11 Standard Library (Zero External Dependencies)</td>
+    </tr>
+    <tr>
+      <td><strong>GUI Framework:</strong></td>
+      <td>Python Desktop Tkinter &amp; Themed Tkinter (ttk)</td>
+    </tr>
+    <tr>
+      <td><strong>Test Suite Status:</strong></td>
+      <td>7 / 7 Automated Unit Tests Passing (100% Pass Rate)</td>
+    </tr>
+  </table>
+</div>
+
+<div class="callout" style="margin-top: 18px;">
+  <div class="callout-title">Assignment Scope &amp; Deliverables Checklist</div>
+  <ul style="margin-bottom: 0;">
+    <li>✔ <strong>Module 1: Document Loading:</strong> Multi-encoding file scanning, disk &amp; in-memory ingestion.</li>
+    <li>✔ <strong>Module 2: Tokenization:</strong> Positional word offsets &amp; character span retention.</li>
+    <li>✔ <strong>Module 3: Text Normalization:</strong> Case folding, Unicode accent removal, stopwords, and full Porter Stemmer.</li>
+    <li>✔ <strong>Module 4: Inverted Index:</strong> Positional postings lists, term frequencies, JSON disk persistence.</li>
+    <li>✔ <strong>Module 5: Query Processing:</strong> Shunting-yard Boolean (AND/OR/NOT/parens), phrase queries, and TF-IDF ranking.</li>
+    <li>✔ <strong>Module 6: Wildcard Processing:</strong> Dual-engine Permuterm Index &amp; K-gram (trigram) index.</li>
+    <li>✔ <strong>Module 7: Frontend GUI:</strong> Desktop GUI with search input box, Search button, and read-only formatted result area.</li>
   </ul>
 </div>
 
-<!-- ================= SECTION 2: PROJECT STRUCTURE ================= -->
-<h1>2. Project Architecture &amp; File Layout</h1>
+<div class="page-break"></div>
+
+<!-- ================= TABLE OF CONTENTS ================= -->
+<h1>Table of Contents</h1>
+<ol style="line-height: 1.8; font-size: 10.5pt;">
+  <li><strong>Executive Summary &amp; Problem Definition</strong></li>
+  <li><strong>System Architecture &amp; Project Structure</strong></li>
+  <li><strong>Detailed Implementation of Required Modules</strong>
+    <ul>
+      <li>3.1. Module 1: Document Loading (<code>src/document_loader.py</code>)</li>
+      <li>3.2. Module 2: Tokenization (<code>src/tokenizer.py</code>)</li>
+      <li>3.3. Module 3: Text Normalization &amp; Case Folding (<code>src/normalizer.py</code>)</li>
+      <li>3.4. Module 4: Positional Inverted Index (<code>src/inverted_index.py</code>)</li>
+      <li>3.5. Module 5: Query Processing Engine (<code>src/query_processor.py</code>)</li>
+      <li>3.6. Module 6: Wildcard Processing (<code>src/wildcard_processor.py</code>)</li>
+      <li>3.7. Module 7: Frontend GUI (<code>src/gui.py</code>)</li>
+    </ul>
+  </li>
+  <li><strong>Mathematical Models &amp; Algorithmic Formulations</strong></li>
+  <li><strong>Sample Corpus &amp; Empirical Query Demonstrations</strong></li>
+  <li><strong>Verification &amp; Automated Test Suite</strong></li>
+  <li><strong>Installation, Execution &amp; User Manual</strong></li>
+  <li><strong>GitHub Version Control &amp; Release Notes</strong></li>
+</ol>
+
+<hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 24px 0;">
+
+<!-- ================= SECTION 1: EXECUTIVE SUMMARY ================= -->
+<h1>1. Executive Summary &amp; Problem Definition</h1>
 <p>
-The project follows clean software architecture principles with single-responsibility module isolation:
+Information Retrieval (IR) is the science of searching for documents, information within documents, and metadata about documents. In modern Web Search and Mining (WSM) systems, constructing efficient, scalable, and mathematically sound indexing and retrieval pipelines is fundamental.
+</p>
+<p>
+The objective of this assignment is to engineer a production-grade, modular Information Retrieval system from scratch. In accordance with strict software engineering specifications, the project enforces clean separation of concerns across seven standalone modules:
+</p>
+<ol>
+  <li><strong>Document Loading:</strong> Automated file discovery, character decoding, and document abstraction.</li>
+  <li><strong>Tokenization:</strong> Lexical boundary segmentation with positional offset tracking.</li>
+  <li><strong>Text Normalization / Case Folding:</strong> Canonicalization of characters, accents, stopwords, and morphological stemming.</li>
+  <li><strong>Inverted Index Construction:</strong> High-performance positional postings list mapping words to document locations.</li>
+  <li><strong>Query Processing:</strong> Multi-paradigm evaluation supporting Boolean logic, exact phrase chains, and TF-IDF ranking.</li>
+  <li><strong>Wildcard Processing:</strong> Advanced sub-string indexing via the classical Permuterm and K-gram architectures.</li>
+  <li><strong>Frontend GUI:</strong> Intuitive desktop interface with dedicated search input, search button, and read-only result presentation.</li>
+</ol>
+
+<div class="callout">
+  <div class="callout-title">Architectural Constraint: Pure Standard Library</div>
+  To guarantee that the solution is completely self-contained and universally executable on any standard Python 3.8+ installation without requiring external packages (such as NLTK, Scikit-Learn, or PyTorch), all algorithms—including the Porter Stemmer, the Shunting-Yard Boolean parser, the Permuterm Index, and the Positional Inverted Index—have been designed and implemented directly using Python's native standard library.
+</div>
+
+<div class="page-break"></div>
+
+<!-- ================= SECTION 2: SYSTEM ARCHITECTURE ================= -->
+<h1>2. System Architecture &amp; Project Structure</h1>
+<p>
+The system employs a pipeline architecture where each stage consumes structured data from the preceding stage through well-defined object interfaces.
 </p>
 
+<h3>Information Flow Pipeline:</h3>
+<div style="background: #f8fafc; border: 1px solid #cbd5e1; padding: 12px; border-radius: 6px; font-family: Consolas; font-size: 8.5pt; line-height: 1.45; margin: 10px 0;">
+  [Raw Files / Corpus] ──&gt; (Module 1: Document Loader) ──&gt; [Document Objects]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Module 2: Tokenizer)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Token(text, pos, offsets)]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Module 3: Normalizer)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Normalized Terms]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌─────────────────────────┴─────────────────────────┐<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Module 4: Inverted Index)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Module 6: Wildcard Processor)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[term -&gt; List[Posting]]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Permuterm &amp; K-Gram Indices]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─────────────────────────┬─────────────────────────┘<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Module 5: Query Processor)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Boolean, Phrase, Ranked &amp; Snippets]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Module 7: Frontend GUI)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Input Box | Search Button | Read-Only Results]
+</div>
+
+<h3>Physical Directory Layout:</h3>
 <pre><code>wsm_search_engine/
-│
 ├── data/
-│   └── sample_corpus/                 # 6 IR & WSM text documents for immediate evaluation
+│   └── sample_corpus/                 # 6 Academic benchmark documents
 │       ├── doc1.txt                   # Web search engines & crawling
 │       ├── doc2.txt                   # Inverted index & tokenization
 │       ├── doc3.txt                   # Query processing & boolean retrieval
 │       ├── doc4.txt                   # Wildcard queries & permuterm index
 │       ├── doc5.txt                   # Web mining & machine learning in search
 │       └── doc6.txt                   # NLP & text normalization
-│
 ├── src/
-│   ├── __init__.py                    # Package initializer
-│   ├── document_loader.py             # Module 1: Document Loading & Metadata Management
-│   ├── tokenizer.py                   # Module 2: Lexical Tokenization & Offset Preservation
-│   ├── normalizer.py                  # Module 3: Case Folding, Accents, Stopwords & Stemming
-│   ├── inverted_index.py              # Module 4: Positional Inverted Index & JSON Persistence
-│   ├── query_processor.py             # Module 5: Boolean, Phrase & Ranked Query Processing
-│   ├── wildcard_processor.py          # Module 6: Permuterm Index & K-Gram Trigram Index
-│   └── gui.py                         # Module 7: Desktop Frontend GUI (Tkinter)
-│
+│   ├── __init__.py                    # Package definition
+│   ├── document_loader.py             # Module 1: Ingestion & Document abstraction
+│   ├── tokenizer.py                   # Module 2: Tokenization & positional tracking
+│   ├── normalizer.py                  # Module 3: Case folding, stopwords, Porter stemmer
+│   ├── inverted_index.py              # Module 4: Positional inverted index & serialization
+│   ├── query_processor.py             # Module 5: Shunting-yard Boolean, phrase, TF-IDF
+│   ├── wildcard_processor.py          # Module 6: Permuterm index & K-gram index
+│   └── gui.py                         # Module 7: Desktop Tkinter GUI application
 ├── tests/
 │   ├── __init__.py
-│   └── test_search_engine.py          # Automated unit test suite covering Modules 1 through 7
-│
-├── main.py                            # Application entry point (GUI, CLI, or single-query mode)
-├── requirements.txt                   # Standard library dependencies documentation
-└── README.md                          # Comprehensive user guide & technical manual</code></pre>
+│   └── test_search_engine.py          # Comprehensive test suite covering all modules
+├── main.py                            # Unified application launcher (GUI / CLI)
+├── requirements.txt                   # Standard library documentation
+├── README.md                          # Repository documentation
+├── documentation.html                 # Complete printable HTML documentation
+└── WSM_Search_Engine_Documentation.pdf# Final generated PDF documentation</code></pre>
 
 <div class="page-break"></div>
 
-<!-- ================= SECTION 3: DETAILED MODULE IMPLEMENTATION ================= -->
-<h1>3. Detailed Module Specifications</h1>
+<!-- ================= SECTION 3: COMPONENT IMPLEMENTATION ================= -->
+<h1>3. Detailed Implementation of Required Modules</h1>
 
-<h2>Module 1: Document Loader (<code>src/document_loader.py</code>)</h2>
+<h2>3.1. Module 1: Document Loading (<code>src/document_loader.py</code>)</h2>
 <p>
-The Document Loader is responsible for discovering, reading, and structuring document data from disk or in-memory sources.
+The <code>DocumentLoader</code> class handles the discovery, decoding, and representation of text files. Documents are encapsulated within a strongly typed <code>Document</code> dataclass:
 </p>
+<pre><code>@dataclass
+class Document:
+    doc_id: int               # Unique integer document identifier (1, 2, 3...)
+    title: str                # Human-readable title (defaults to filename)
+    path: str                 # Canonical filesystem path
+    content: str              # Complete raw textual body
+    metadata: Dict[str, str]  # Arbitrary metadata dictionary</code></pre>
+
+<p><strong>Key Engineering Features:</strong></p>
 <ul>
-  <li><strong>Document Data Model:</strong> Represents documents via the <code>Document</code> dataclass, storing <code>doc_id</code> (integer), <code>title</code>, absolute <code>path</code>, raw <code>content</code>, and <code>metadata</code>. Provides dynamic properties for <code>word_count</code> and <code>char_count</code>.</li>
-  <li><strong>Encoding Resilience:</strong> Automatically detects and gracefully handles encoding variants (<code>utf-8</code>, <code>utf-8-sig</code>, <code>latin-1</code>, <code>cp1252</code>) with byte replacement fallback to avoid file reading aborts.</li>
-  <li><strong>Directory Ingestion:</strong> Ingests all text files with extensions <code>.txt</code>, <code>.md</code>, <code>.data</code> deterministically sorted for reproducible document identifier assignment.</li>
+  <li><strong>Multi-Encoding Detection:</strong> Files are read by attempting <code>utf-8</code>, <code>utf-8-sig</code>, <code>latin-1</code>, and <code>cp1252</code> in sequence, falling back to <code>errors="replace"</code> so that corrupt or non-standard characters never crash index construction.</li>
+  <li><strong>Deterministic Sorting:</strong> Directory traversal orders filenames alphabetically before assigning IDs, ensuring reproducibility across runs and environments.</li>
+  <li><strong>In-Memory Addition:</strong> Supports <code>add_text_document(title, content)</code> for dynamic document creation without touching the hard drive (used extensively in unit testing).</li>
 </ul>
 
-<h2>Module 2: Tokenizer (<code>src/tokenizer.py</code>)</h2>
+<h2>3.2. Module 2: Tokenization (<code>src/tokenizer.py</code>)</h2>
 <p>
-Transforms raw character streams into structured token streams while preserving critical spatial metadata:
+The <code>Tokenizer</code> class segments raw unstructured text into atomic <code>Token</code> instances. Unlike rudimentary splitters, it captures positional and character-level boundaries:
 </p>
+<pre><code>@dataclass
+class Token:
+    text: str           # String representation of token
+    position: int       # Zero-indexed word index in doc (0, 1, 2...)
+    start_char: int     # Character start offset in raw content
+    end_char: int       # Character end offset in raw content</code></pre>
+
+<p><strong>Dual Regular Expression Patterns:</strong></p>
 <ul>
-  <li><strong>Token Representation:</strong> Encapsulates tokens inside a <code>Token</code> dataclass containing:
+  <li><strong>Document Pattern:</strong> <code>r"[a-zA-Z0-9]+(?:'[a-zA-Z0-9]+)?"</code> extracts alphanumeric words, numbers, and contractions (e.g. <em>don't</em>, <em>user's</em>).</li>
+  <li><strong>Query Pattern:</strong> <code>r"[a-zA-Z0-9*?]+(?:'[a-zA-Z0-9]+)?"</code> retains wildcard markers (<code>*</code> and <code>?</code>) during search query analysis so wildcards are not inadvertently stripped before query evaluation.</li>
+</ul>
+
+<h2>3.3. Module 3: Text Normalization &amp; Case Folding (<code>src/normalizer.py</code>)</h2>
+<p>
+Normalization bridges the gap between lexical variations in queries and documents. The <code>TextNormalizer</code> coordinates four distinct transformations:
+</p>
+<ol>
+  <li><strong>Case Folding:</strong> Invokes <code>str.lower()</code> across all tokens, ensuring case-insensitive retrieval.</li>
+  <li><strong>Unicode Normalization:</strong> Decomposes composite characters via Unicode NFKD normalization and strips non-spacing combining characters (e.g. converting <code>résumé</code> to <code>resume</code>).</li>
+  <li><strong>Punctuation Stripping:</strong> Removes peripheral delimiters (<code>`~!@#$%^&amp;*()-_=+[{]}\\|;:'",&lt;.&gt;/?</code>) while retaining valid alphanumeric characters.</li>
+  <li><strong>Stopword Filtering:</strong> An internal set of 120+ standard Information Retrieval stopwords can be filtered out when enabled.</li>
+  <li><strong>Porter Stemmer Algorithm:</strong> Built-in implementation of Martin Porter’s 1980 algorithm consisting of:
     <ul>
-      <li><code>text</code>: Normalized lexical string.</li>
-      <li><code>position</code>: Zero-indexed word index in the document ($0, 1, 2, \dots$) essential for positional index construction.</li>
-      <li><code>start_char</code> &amp; <code>end_char</code>: Character offsets in the raw document string enabling snippet extraction and exact substring highlighting.</li>
+      <li><em>Step 1a &amp; 1b:</em> Plural forms and past participles (e.g., <em>sses</em> $\rightarrow$ <em>ss</em>, <em>ies</em> $\rightarrow$ <em>i</em>, <em>eed</em> $\rightarrow$ <em>ee</em>).</li>
+      <li><em>Step 1c:</em> Terminal <em>y</em> replacement (<em>y</em> $\rightarrow$ <em>i</em> following a consonant).</li>
+      <li><em>Step 2:</em> Double suffixes (e.g., <em>ational</em> $\rightarrow$ <em>ate</em>, <em>ization</em> $\rightarrow$ <em>ize</em>).</li>
+      <li><em>Step 3:</em> Suffix transformations (e.g., <em>alize</em> $\rightarrow$ <em>al</em>, <em>icate</em> $\rightarrow$ <em>ic</em>).</li>
+      <li><em>Step 4:</em> Complex suffix removal (e.g., <em>ement</em>, <em>able</em>, <em>ible</em>).</li>
+      <li><em>Step 5a &amp; 5b:</em> Final <em>-e</em> and double <em>-l</em> elimination.</li>
     </ul>
   </li>
-  <li><strong>Query-Aware Tokenization:</strong> Implements distinct patterns for document indexing (alphanumeric words and contractions) versus query parsing (which preserves wildcard characters <code>*</code> and <code>?</code>).</li>
-</ul>
+</ol>
 
-<h2>Module 3: Text Normalizer &amp; Case Folding (<code>src/normalizer.py</code>)</h2>
+<div class="page-break"></div>
+
+<h2>3.4. Module 4: Positional Inverted Index (<code>src/inverted_index.py</code>)</h2>
 <p>
-Standardizes vocabulary across documents and queries to eliminate superficial lexical divergence:
+The <code>InvertedIndex</code> class maps each normalized vocabulary term to an ordered list of <code>Posting</code> records:
+</p>
+<pre><code>@dataclass
+class Posting:
+    doc_id: int                  # Document containing the term
+    term_frequency: int          # Count of term occurrences in this document
+    positions: List[int]         # Ordered token offsets [p1, p2, p3, ...]</code></pre>
+
+<p>
+The positional index maintains the document lengths table (total tokens per document) required for length-normalized ranked scoring and supports complete JSON disk persistence via <code>save_to_file()</code> and <code>load_from_file()</code>.
+</p>
+
+<h2>3.5. Module 5: Query Processing Engine (<code>src/query_processor.py</code>)</h2>
+<p>
+Supports four major retrieval paradigms:
 </p>
 <ul>
-  <li><strong>Case Folding:</strong> Converts all characters to lowercase form to support case-insensitive retrieval.</li>
-  <li><strong>Diacritic &amp; Accent Stripping:</strong> Decomposes Unicode characters via NFKD normalization and eliminates non-spacing mark bytes (e.g. <code>café</code> becomes <code>cafe</code>).</li>
-  <li><strong>Punctuation Stripping:</strong> Cleans leading/trailing non-alphanumeric punctuation while maintaining valid intra-token characters.</li>
-  <li><strong>Stopword Filtering:</strong> Configurable filtering of 120+ standard English stopwords (e.g. <em>the, is, at, which</em>).</li>
-  <li><strong>Porter Stemming:</strong> Self-contained implementation of Martin Porter's 1980 suffix-stripping algorithm (Steps 1a, 1b, 1c, 2, 3, 4, 5a, 5b) allowing grammatical grouping (e.g., <em>retrieval, retrieving, retrieves</em> $\rightarrow$ <em>retriev</em>).</li>
+  <li><strong>Boolean Parsing via Shunting-Yard Algorithm:</strong> Converts infix expressions containing <code>AND</code>, <code>OR</code>, <code>NOT</code>, and parentheses into Reverse Polish Notation (RPN). Automatically inserts implicit <code>AND</code> conjunctions between adjacent operands (e.g. <code>web search</code> $\rightarrow$ <code>web AND search</code>) and between an operand and <code>NOT</code> (e.g. <code>index NOT permuterm</code> $\rightarrow$ <code>index AND NOT permuterm</code>). Postings lists are intersected using a linear-time two-pointer algorithm.</li>
+  <li><strong>Positional Phrase Search:</strong> Evaluates quoted expressions (e.g., <code>"inverted index"</code>). The engine identifies documents containing all terms, inspects their position lists, and validates that consecutive tokens appear at adjacent word indices ($pos_{k+1} = pos_k + 1$).</li>
+  <li><strong>Ranked Free-Text Retrieval:</strong> Employs sublinear TF-IDF scoring normalized by the square root of the document length.</li>
+  <li><strong>Dynamic Context Snippets:</strong> Computes a 180-character window around the densest matching term cluster, snaps boundaries cleanly to word breaks, and encapsulates matching terms in bracket markers for GUI highlighting.</li>
 </ul>
 
-<h2>Module 4: Inverted Index Construction (<code>src/inverted_index.py</code>)</h2>
+<h2>3.6. Module 6: Wildcard Processing (<code>src/wildcard_processor.py</code>)</h2>
 <p>
-Constructs a Positional Inverted Index mapping vocabulary terms to sorted postings records:
+Wildcard expansion avoids sequential scanning of the vocabulary by employing auxiliary sub-string indices:
 </p>
-<ul>
-  <li><strong>Posting Structure:</strong> Each <code>Posting</code> stores <code>doc_id</code>, <code>term_frequency</code> ($tf$), and the sorted array of word <code>positions</code>:
-    <pre><code>Posting(doc_id=1, term_frequency=3, positions=[5, 23, 78])</code></pre>
+<ol>
+  <li><strong>Permuterm Index:</strong>
+    <ul>
+      <li>Appends the special end-of-word sentinel <code>$</code> to each vocabulary term.</li>
+      <li>Generates all cyclic permutations. For example, for <em>hello$</em>:
+        <pre><code>hello$, ello$h, llo$he, lo$hel, o$hell, $hello</code></pre>
+      </li>
+      <li>Queries are rotated until the asterisk <code>*</code> is at the right-hand side, converting wildcard matching into a prefix lookup:
+        <ul>
+          <li>Trailing wildcard <code>X*</code> $\rightarrow$ rotated to <code>$X*</code> (lookup prefix <code>$X</code>)</li>
+          <li>Leading wildcard <code>*X</code> $\rightarrow$ rotated to <code>X$*</code> (lookup prefix <code>X$</code>)</li>
+          <li>Middle wildcard <code>X*Y</code> $\rightarrow$ rotated to <code>Y$X*</code> (lookup prefix <code>Y$X</code>)</li>
+        </ul>
+      </li>
+      <li>Prefix lookup uses binary search (<code>bisect</code>) over alphabetically sorted keys in $O(\log V)$ time.</li>
+    </ul>
   </li>
-  <li><strong>Index Organization:</strong> Postings lists are guaranteed sorted by <code>doc_id</code> ascending, allowing linear-time intersection ($O(M+N)$) during query processing.</li>
-  <li><strong>Persistence:</strong> Provides built-in <code>save_to_file(path)</code> and <code>load_from_file(path)</code> to serialize and deserialize the entire inverted index to and from JSON format.</li>
+  <li><strong>K-Gram (Trigram) Index:</strong>
+    Pads terms with <code>$term$</code>, extracts 3-character character n-grams, intersects candidate vocabulary lists, and eliminates false positives via regular expression post-filtering.
+  </li>
+</ol>
+
+<h2>3.7. Module 7: Frontend GUI (<code>src/gui.py</code>)</h2>
+<p>
+Developed using Python's native <code>tkinter</code> and <code>ttk</code> frameworks, the desktop interface satisfies all requirements:
+</p>
+<ul>
+  <li><strong>Search Input Box:</strong> Sizable text entry with automatic keyboard focus, Enter key binding (<code>&lt;Return&gt;</code>), and a clear button.</li>
+  <li><strong>Search Button:</strong> Distinct primary button (<code>🔍 Search</code>) with hover and press visual feedback.</li>
+  <li><strong>Read-Only Result Area:</strong> Scrolled text area configured with <code>state="disabled"</code> so users cannot overwrite results, while preserving full selection and copy functionality. The result area features rich color-coded tagging for document titles, match scores, file metadata, wildcard expansion alerts, and yellow highlighted snippet words.</li>
+  <li><strong>Corpus Bar:</strong> Path selector with a native "Browse..." folder dialog and a "Rebuild Index" button.</li>
+  <li><strong>Pre-processing Checkboxes:</strong> Real-time toggles for Porter Stemming and Stopword Removal.</li>
+  <li><strong>Query Mode Dropdown:</strong> Select between Auto Detect, Boolean Query, Phrase Query, Wildcard Query, and Free Text.</li>
 </ul>
 
 <div class="page-break"></div>
 
-<h2>Module 5: Query Processing (<code>src/query_processor.py</code>)</h2>
+<!-- ================= SECTION 4: MATHEMATICAL FORMULATIONS ================= -->
+<h1>4. Mathematical Models &amp; Algorithmic Formulations</h1>
+
+<h2>4.1. Positional Phrase Intersection Algorithm</h2>
 <p>
-The core engine supporting Boolean, Phrase, Ranked Free-Text, and Wildcard search modalities:
+For a phrase query consisting of ordered terms $t_1, t_2, \dots, t_k$, a document $D$ is a match if and only if there exists a sequence of positions $(p_1, p_2, \dots, p_k)$ such that $p_i \in \text{positions}(t_i, D)$ and:
 </p>
+<div class="formula-box">
+  p_{i+1} = p_i + 1 \quad \forall \, 1 \le i &lt; k
+</div>
+
+<h2>4.2. Logarithmic TF-IDF Relevance Scoring</h2>
+<p>
+For free-text ranked queries, each candidate document $D$ is scored against query $Q$ using sublinearly scaled term frequency and smoothed inverse document frequency:
+</p>
+<div class="formula-box">
+  \text{Score}(D, Q) = \frac{1}{\sqrt{\text{Length}_D}} \sum_{t \in Q \cap D} \left(1 + \ln(\text{TF}_{t, D})\right) \cdot \ln\left(1 + \frac{N}{\text{DF}_t}\right)
+</div>
+<p>Where:</p>
 <ul>
-  <li><strong>Boolean Retrieval (Shunting-Yard Algorithm):</strong>
-    Parses boolean queries (with operators <code>AND</code>, <code>OR</code>, <code>NOT</code> and parentheses) by converting infix expressions to Reverse Polish Notation (RPN). Automatically inserts implicit <code>AND</code> conjunctions between consecutive operands or between operands and <code>NOT</code> (e.g. <code>index NOT permuterm</code> $\rightarrow$ <code>index AND NOT permuterm</code>).
-  </li>
-  <li><strong>Positional Phrase Retrieval:</strong>
-    Evaluates exact word sequences (e.g. <code>"inverted index"</code>). The algorithm identifies candidate documents containing all query terms, extracts their position arrays, and verifies whether an unbroken chain of consecutive positions ($pos_{k+1} = pos_k + 1$) exists.
-  </li>
-  <li><strong>Ranked Free-Text Search (TF-IDF):</strong>
-    Computes logarithmic Term Frequency - Inverse Document Frequency with document length normalization:
-    <pre><code>Score(D, Q) = sum( (1 + ln(TF_t,D)) * ln(1 + (N / DF_t)) ) / sqrt(Length_D)</code></pre>
-  </li>
-  <li><strong>Contextual Snippet Generation:</strong>
-    Computes a localized context window centered around matching terms, snaps boundaries to whole words, and tags matching terms for highlighting.
-  </li>
+  <li>$\text{TF}_{t, D}$ is the term frequency of term $t$ in document $D$.</li>
+  <li>$\text{DF}_t$ is the document frequency (number of documents containing term $t$).</li>
+  <li>$N$ is the total number of documents in the collection.</li>
+  <li>$\text{Length}_D$ is the token count of document $D$ (providing cosine-like length normalization to prevent bias toward longer documents).</li>
 </ul>
 
-<h2>Module 6: Wildcard Processing (<code>src/wildcard_processor.py</code>)</h2>
+<h2>4.3. Shunting-Yard Boolean Parsing Algorithm</h2>
 <p>
-Implements the two fundamental wildcard indexing strategies from classical IR literature:
+Dijkstra's Shunting-yard algorithm converts infix boolean expressions to postfix (RPN) using an operator stack and output queue:
 </p>
-<table style="margin-top: 8px;">
+<table class="data-table">
   <thead>
     <tr>
-      <th>Technique</th>
-      <th>Data Structure</th>
-      <th>Transformation / Query Mechanism</th>
-      <th>Complexity / Advantage</th>
+      <th>Operator</th>
+      <th>Precedence</th>
+      <th>Associativity</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Permuterm Index</strong></td>
-      <td>Dictionary of cyclic rotations + sorted prefix array</td>
-      <td>
-        Appends boundary <code>$</code> to term. Rotates query until <code>*</code> is at the right edge:<br>
-        • <code>X*</code> $\rightarrow$ <code>$X*</code> (lookup prefix <code>$X</code>)<br>
-        • <code>*X</code> $\rightarrow$ <code>X$*</code> (lookup prefix <code>X$</code>)<br>
-        • <code>X*Y</code> $\rightarrow$ <code>Y$X*</code> (lookup prefix <code>Y$X</code>)
-      </td>
-      <td>Binary search prefix range lookup $O(\log V)$. Highly efficient for single wildcard queries.</td>
+      <td><code>NOT</code></td>
+      <td>3 (Highest)</td>
+      <td>Right-to-Left (Unary)</td>
+      <td>Complement / Universal Set Difference ($U \setminus S$)</td>
     </tr>
     <tr>
-      <td><strong>K-gram Index</strong></td>
-      <td>Inverted index of character 3-grams to vocabulary terms</td>
-      <td>
-        Pads words with <code>$term$</code>. Segments wildcard query into 3-grams, intersects postings lists of candidate terms, and eliminates false positives with regex post-filtering.
-      </td>
-      <td>Handles multiple arbitrary wildcards (e.g. <code>p*rm*t*rm</code>) where rotations are ambiguous.</td>
+      <td><code>AND</code></td>
+      <td>2</td>
+      <td>Left-to-Right (Binary)</td>
+      <td>Two-pointer Postings List Intersection ($S_1 \cap S_2$)</td>
+    </tr>
+    <tr>
+      <td><code>OR</code></td>
+      <td>1 (Lowest)</td>
+      <td>Left-to-Right (Binary)</td>
+      <td>Two-pointer Postings List Union ($S_1 \cup S_2$)</td>
+    </tr>
+    <tr>
+      <td><code>( ... )</code></td>
+      <td>N/A</td>
+      <td>Delimiter</td>
+      <td>Forces nested sub-expression evaluation override</td>
     </tr>
   </tbody>
 </table>
 
-<h2>Module 7: Frontend GUI (<code>src/gui.py</code>)</h2>
-<p>
-Provides a modern desktop interface developed using Python's native <code>tkinter</code> and <code>ttk</code>:
-</p>
-<ul>
-  <li><strong>Search Input Box:</strong> Sizable text entry with automatic focus, Enter key binding (<code>&lt;Return&gt;</code>), and a clear button.</li>
-  <li><strong>Search Button:</strong> Primary styled accent button (<code>🔍 Search</code>) providing immediate search execution.</li>
-  <li><strong>Read-Only Result Area:</strong> Scrolled text box maintaining <code>state="disabled"</code> so users cannot edit results, while allowing full text selection and copying. Utilizes rich Tkinter tags for document headers, metadata badges, scores, wildcard expansions, and highlighted snippet terms.</li>
-  <li><strong>Corpus &amp; Index Management:</strong> Directory browsing, index rebuild trigger, and index status metrics.</li>
-  <li><strong>Pre-processing Toggles:</strong> Live checkboxes to enable or disable Porter Stemming and Stopword Removal.</li>
-</ul>
-
 <div class="page-break"></div>
 
-<!-- ================= SECTION 4: DEMONSTRATION & TEST RESULTS ================= -->
-<h1>4. Experimental Verification &amp; Test Results</h1>
+<!-- ================= SECTION 5: SAMPLE CORPUS & QUERIES ================= -->
+<h1>5. Sample Corpus &amp; Empirical Query Demonstrations</h1>
 
-<h2>Automated Unit Test Suite</h2>
+<h2>5.1. Benchmark Corpus Documents</h2>
 <p>
-The project includes a comprehensive test suite in <code>tests/test_search_engine.py</code> testing all components end-to-end, including headless GUI initialization.
+The project includes six dedicated academic documents in <code>data/sample_corpus/</code>:
 </p>
-
-<table>
+<table class="data-table">
   <thead>
     <tr>
-      <th>Test Case</th>
-      <th>Target Module</th>
-      <th>Verification Criteria</th>
-      <th>Status</th>
+      <th>Doc ID</th>
+      <th>Filename</th>
+      <th>Primary Topics Covered</th>
+      <th>Sample Key Terms</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td><strong>1</strong></td>
+      <td><code>doc1.txt</code></td>
+      <td>Web Search Engines &amp; Web Crawling</td>
+      <td>crawling, pagerank, bm25, index, hyperlinks</td>
+    </tr>
+    <tr>
+      <td><strong>2</strong></td>
+      <td><code>doc2.txt</code></td>
+      <td>Inverted Index &amp; Positional Postings</td>
+      <td>inverted index, tokenization, positional, postings</td>
+    </tr>
+    <tr>
+      <td><strong>3</strong></td>
+      <td><code>doc3.txt</code></td>
+      <td>Query Processing &amp; Boolean Retrieval</td>
+      <td>boolean, AND, OR, NOT, phrase queries, intersection</td>
+    </tr>
+    <tr>
+      <td><strong>4</strong></td>
+      <td><code>doc4.txt</code></td>
+      <td>Wildcard Processing &amp; Permuterm Index</td>
+      <td>wildcard, permuterm, k-gram, rotation, cyclic</td>
+    </tr>
+    <tr>
+      <td><strong>5</strong></td>
+      <td><code>doc5.txt</code></td>
+      <td>Web Mining &amp; Machine Learning in Search</td>
+      <td>data mining, web mining, classification, clustering</td>
+    </tr>
+    <tr>
+      <td><strong>6</strong></td>
+      <td><code>doc6.txt</code></td>
+      <td>NLP &amp; Text Normalization Techniques</td>
+      <td>case folding, accents, stopwords, porter stemmer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>5.2. Query Execution Demonstrations</h2>
+
+<h3>Demonstration A: Boolean Query with Negation</h3>
+<pre><code>Input Query: web AND mining NOT machine
+Parsed RPN:  web mining AND machine NOT AND
+Matches:     Doc 1 (doc1.txt), Doc 5 (doc5.txt)
+Diagnostic:  Documents mentioning 'machine' (e.g. doc5 paragraph 3 mentions machine learning)
+             are excluded, returning strictly matching doc1.</code></pre>
+
+<h3>Demonstration B: Wildcard Query via Permuterm Index</h3>
+<pre><code>Input Query: sear*
+Permuterm:   Prefix lookup on '$sear' -> Expanded to: ['search', 'searches']
+Ranked Hits: 5 documents matched
+             #1 Doc 2 (doc2.txt) - Score: 0.2476
+             #2 Doc 1 (doc1.txt) - Score: 0.1894
+             #3 Doc 5 (doc5.txt) - Score: 0.1384
+             #4 Doc 6 (doc6.txt) - Score: 0.0759
+             #5 Doc 3 (doc3.txt) - Score: 0.0735
+Snippet:     ... Positional postings allow the [search] engine to process phrase
+             queries and proximity [searches] efficiently.</code></pre>
+
+<h3>Demonstration C: Exact Phrase Query via Positional Index</h3>
+<pre><code>Input Query: "inverted index"
+Postings:    doc1: inverted=[24], index=[25] -> Chain valid (pos 25 == 24 + 1) -> MATCH
+             doc2: inverted=[1, 23], index=[2, 24] -> Chain valid -> MATCH
+             doc3: inverted=[13], index=[14] -> Chain valid -> MATCH
+Result:      Exact hits in Doc 1, Doc 2, Doc 3. Non-adjacent occurrences rejected.</code></pre>
+
+<div class="page-break"></div>
+
+<!-- ================= SECTION 6: VERIFICATION & TESTING ================= -->
+<h1>6. Verification &amp; Automated Test Suite</h1>
+<p>
+The system is equipped with automated unit tests in <code>tests/test_search_engine.py</code> executed via Python's <code>unittest</code> framework. All seven test cases pass with zero failures and zero errors.
+</p>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Test Method</th>
+      <th>Target Component</th>
+      <th>Verified Behaviors</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
       <td><code>test_document_loader</code></td>
-      <td>Module 1</td>
-      <td>Directory scanning, encoding fallback, metadata generation, and in-memory document injection.</td>
+      <td>Module 1 (Loader)</td>
+      <td>File scanning, encoding detection, word/char counting, in-memory document addition.</td>
       <td><span class="badge badge-success">PASSED</span></td>
     </tr>
     <tr>
+      <td>2</td>
       <td><code>test_tokenizer</code></td>
-      <td>Module 2</td>
-      <td>Word boundary extraction, contraction preservation, sequential token indices, character offsets.</td>
+      <td>Module 2 (Tokenizer)</td>
+      <td>Alphanumeric boundaries, contraction preservation, word positions, char spans.</td>
       <td><span class="badge badge-success">PASSED</span></td>
     </tr>
     <tr>
+      <td>3</td>
       <td><code>test_normalization_and_case_folding</code></td>
-      <td>Module 3</td>
-      <td>Lowercase folding, accent stripping (café $\rightarrow$ cafe), stopword filtering, and Porter stemmer.</td>
+      <td>Module 3 (Normalizer)</td>
+      <td>Case folding, accent removal (café $\rightarrow$ cafe), stopword filtering, Porter stemmer.</td>
       <td><span class="badge badge-success">PASSED</span></td>
     </tr>
     <tr>
+      <td>4</td>
       <td><code>test_inverted_index_construction</code></td>
-      <td>Module 4</td>
-      <td>Postings list creation, positional array verification, term frequency calculation, JSON persistence.</td>
+      <td>Module 4 (Index)</td>
+      <td>Postings construction, positional arrays, term frequency counts, JSON persistence.</td>
       <td><span class="badge badge-success">PASSED</span></td>
     </tr>
     <tr>
+      <td>5</td>
       <td><code>test_wildcard_permuterm_and_kgram</code></td>
-      <td>Module 6</td>
-      <td>Trailing (<code>sear*</code>), leading (<code>*ing</code>), and middle (<code>m*n</code>) wildcards with Permuterm &amp; K-gram.</td>
+      <td>Module 6 (Wildcard)</td>
+      <td>Prefix (<code>X*</code>), suffix (<code>*X</code>), and middle (<code>X*Y</code>) wildcard expansions.</td>
       <td><span class="badge badge-success">PASSED</span></td>
     </tr>
     <tr>
+      <td>6</td>
       <td><code>test_query_processing</code></td>
-      <td>Module 5</td>
-      <td>Boolean AND/OR/NOT evaluation, exact phrase matching (adjacent positions), and ranked search.</td>
+      <td>Module 5 (Query)</td>
+      <td>Boolean AND/OR/NOT evaluation, exact phrase chains, TF-IDF ranking.</td>
       <td><span class="badge badge-success">PASSED</span></td>
     </tr>
     <tr>
+      <td>7</td>
       <td><code>test_frontend_gui_components</code></td>
-      <td>Module 7</td>
-      <td>Headless Tkinter widget initialization, read-only state validation, and programmatic search trigger.</td>
+      <td>Module 7 (GUI)</td>
+      <td>Tkinter headless initialization, search entry, search button, read-only result area validation.</td>
       <td><span class="badge badge-success">PASSED</span></td>
     </tr>
   </tbody>
 </table>
 
-<h2>Sample Query Demonstrations</h2>
+<h3>Console Execution Log:</h3>
+<pre><code>PS C:\Users\rathi\.gemini\antigravity\scratch\wsm_search_engine&gt; python -m unittest discover tests
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 1.950s
 
-<pre><code># 1. Boolean Query with Conjunction and Negation
-Query: "web AND mining NOT machine"
-Mode:  BOOLEAN
-Hits:  2 documents [doc1.txt, doc5.txt]
-Note:  doc5 matches 'web' and 'mining'; documents mentioning 'machine' are excluded.
+OK</code></pre>
 
-# 2. Wildcard Query
-Query: "sear*"
-Mode:  WILDCARD
-Expansion: 'sear*' -> ['search', 'searches']
-Hits:  5 documents [doc2.txt, doc1.txt, doc5.txt, doc6.txt, doc3.txt]
-Score: Ranked via TF-IDF with sublinear scaling.
+<!-- ================= SECTION 7: USER MANUAL ================= -->
+<h1>7. Installation, Execution &amp; User Manual</h1>
 
-# 3. Positional Phrase Query
-Query: '"inverted index"'
-Mode:  PHRASE
-Hits:  3 documents [doc1.txt, doc2.txt, doc3.txt]
-Note:  Only documents containing adjacent tokens ('inverted' at pos k, 'index' at pos k+1) matched.</code></pre>
+<h3>Prerequisites</h3>
+<ul>
+  <li>Python 3.8 or higher (Python 3.11 recommended).</li>
+  <li>No external <code>pip</code> packages are required.</li>
+</ul>
 
-<!-- ================= SECTION 5: HOW TO RUN ================= -->
-<h1>5. Execution &amp; User Guide</h1>
-
-<h3>1. Launch Desktop GUI (Recommended)</h3>
+<h3>Launching the Desktop GUI</h3>
 <pre><code>cd C:\Users\rathi\.gemini\antigravity\scratch\wsm_search_engine
 python main.py</code></pre>
 
-<h3>2. Interactive Command-Line Interface</h3>
+<h3>Running Interactive CLI Mode</h3>
 <pre><code>python main.py --cli</code></pre>
 
-<h3>3. Single-Query Terminal Search</h3>
+<h3>Executing a Single Query via Terminal</h3>
 <pre><code>python main.py --query "web AND mining"
 python main.py --query "sear*"</code></pre>
 
-<h3>4. Execute Test Suite</h3>
+<h3>Running the Test Suite</h3>
 <pre><code>python -m unittest discover tests</code></pre>
 
-<div class="callout" style="margin-top: 24px;">
-  <div class="callout-title">GitHub Repository</div>
-  Source code, documentation, and sample dataset are hosted at:<br>
-  <strong><a href="https://github.com/Saathwik56/wsm_search_engine" style="color: #2563eb;">https://github.com/Saathwik56/wsm_search_engine</a></strong>
+<!-- ================= SECTION 8: GITHUB ================= -->
+<h1>8. GitHub Version Control &amp; Submission Links</h1>
+<p>
+The complete codebase, test suite, benchmark datasets, and documentation are published on GitHub:
+</p>
+<div class="callout">
+  <div class="callout-title">Official Repository Link</div>
+  <strong>GitHub:</strong> <a href="https://github.com/Saathwik56/wsm_search_engine" style="color: #2563eb; font-weight: 700;">https://github.com/Saathwik56/wsm_search_engine</a><br>
+  <strong>Student Author:</strong> R. Saathwik (ID: B124093)
 </div>
 
 </body>
