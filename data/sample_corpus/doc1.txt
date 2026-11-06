@@ -1,0 +1,4 @@
+Web search engines are practical information retrieval systems designed to search for information on the World Wide Web. The search results are generally presented in a line of results often referred to as search engine results pages. The information may consist of web pages, images, information and other types of files.
+
+Information retrieval is the activity of obtaining information system resources that are relevant to an information need from a collection of those resources. Web search engines crawl billions of pages to index web content, parse hyperlinks, and extract relevant metadata.
+Search engines rely on complex ranking algorithms such as PageRank and BM25 to score documents. Crawlers systematically browse the internet to download web pages for inverted index construction. Web mining and link analysis play a crucial role in evaluating page authority and user intent.

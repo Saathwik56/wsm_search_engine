@@ -1,0 +1,4 @@
+An inverted index is an essential database data structure storing a mapping from words to their locations in a document or a set of documents. In computer science and information retrieval, an inverted index is also known as an inverted file or postings file.
+
+The core pipeline begins with tokenization, where text is split into tokens by removing whitespace and punctuation. Text normalization follows, involving case folding to convert capital letters to lowercase, accents removal, and optional stemming.
+The resulting inverted index consists of a dictionary of terms and a postings list for each term. Each posting stores the document identifier and the positions where the term occurs. Positional postings allow the search engine to process phrase queries and proximity searches efficiently.

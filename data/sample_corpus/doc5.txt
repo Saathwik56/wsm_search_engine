@@ -1,0 +1,3 @@
+Web mining applies data mining techniques to extract interesting patterns and knowledge from web data. It encompasses web content mining, web structure mining, and web usage mining.
+Web content mining focuses on analyzing the textual and multimedia content within web documents. Text classification, topic modeling, and sentiment analysis assist search engines in categorizing web pages accurately.
+Web structure mining analyzes hyperlink topologies to infer authority and relevance. Machine learning models, including learning to rank algorithms, combine text matching scores, user click-through rates, and domain reputation to deliver optimized search results to users.

@@ -1,0 +1,14 @@
+# WSM Search Engine
+# Pure Python Standard Library (No external third-party dependencies required!)
+# Compatible with Python 3.8+ (Tested on Python 3.11)
+#
+# Standard modules utilized:
+# - tkinter (GUI frontend, entry, button, text area)
+# - dataclasses (Document, Token, Posting, SearchResult)
+# - re (Regex tokenization, boundary matching)
+# - unicodedata (Case folding, diacritic/accent normalization)
+# - json (Index serialization and disk persistence)
+# - math (TF-IDF sublinear scaling and logarithms)
+# - bisect (Binary search prefix lookup in Permuterm index)
+# - unittest (Unit test suite)
+
